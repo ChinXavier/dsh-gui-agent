@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Agent control",
+    "description": "Enable Windows-level mouse, keyboard and screenshot control for the current session so the agent can drive browsers and desktop apps."
+  },
+  "toggle": {
+    "label": "Agent control",
+    "on": "Agent control is ON for this session — click to turn it off",
+    "off": "Turn on agent control for this session (mouse, keyboard, screenshots)",
+    "unknown": "Agent control state unavailable"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "dsh-gui-agent",
+  "version": "0.1.0",
+  "description": "Session-scoped Windows mouse, keyboard, window and screenshot control for the DSH agent, with human-like input pacing.",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "ChinXavier",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChinXavier/dsh-gui-agent.git"
+  },
+  "homepage": "https://github.com/ChinXavier/dsh-gui-agent#readme",
+  "bugs": {
+    "url": "https://github.com/ChinXavier/dsh-gui-agent/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "computer-use",
+    "gui-agent",
+    "desktop-automation",
+    "mouse",
+    "keyboard",
+    "screenshot",
+    "ui-automation",
+    "windows"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.1.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/",
+    "helper/",
+    "locale/",
+    "icon.svg",
+    "assets/",
+    "docs/",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
